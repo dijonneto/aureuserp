@@ -126,6 +126,8 @@ return [
 
     'infolist' => [
         'tabs' => [
+            'title' => 'Journal Information',
+
             'journal-entries' => [
                 'title' => 'Journal Entries',
 

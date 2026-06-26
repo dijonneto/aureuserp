@@ -28,6 +28,10 @@ return [
         ],
 
         'tabs' => [
+            'details' => [
+                'title' => 'Details',
+            ],
+
             'operations' => [
                 'title' => 'Operations',
 

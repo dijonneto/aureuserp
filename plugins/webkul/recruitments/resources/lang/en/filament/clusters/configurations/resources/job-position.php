@@ -192,6 +192,7 @@ return [
 
                 'entries' => [
                     'status' => 'Status',
+                    'expected-skills' => 'Expected Skills',
                 ],
             ],
         ],

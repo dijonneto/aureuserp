@@ -14,4 +14,9 @@ return [
             'body'  => 'This is a system role and cannot be deleted.',
         ],
     ],
+
+    'exceptions' => [
+        'system-role-update' => 'You are not allowed to modify this system role.',
+        'system-role-delete' => 'You are not allowed to delete this system role.',
+    ],
 ];

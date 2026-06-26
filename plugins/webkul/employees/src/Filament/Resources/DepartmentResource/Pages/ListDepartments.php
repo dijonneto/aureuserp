@@ -27,10 +27,9 @@ class ListDepartments extends ListRecords
     public function getPresetTableViews(): array
     {
         return [
-            'archived' => PresetView::make('Archived')
+            'archived' => PresetView::make(__('employees::filament/resources/department/pages/list-department.tabs.archived-departments'))
                 ->icon('heroicon-s-archive-box')
                 ->favorite()
-                ->label(__('employees::filament/resources/department/pages/list-department.tabs.archived-departments'))
                 ->modifyQueryUsing(fn (Builder $query) => $query->onlyTrashed()),
         ];
     }

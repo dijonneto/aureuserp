@@ -20,6 +20,10 @@ return [
 
                 'repeater' => [
                     'due-terms' => [
+                        'actions' => [
+                            'add-due-term' => 'Add Due Term',
+                        ],
+
                         'fields' => [
                             'value'                  => 'Value',
                             'due'                    => 'Due',
@@ -28,6 +32,10 @@ return [
                             'days'                   => 'Days',
                         ],
                     ],
+                ],
+
+                'preview' => [
+                    'empty' => 'No due terms defined to preview',
                 ],
             ],
         ],
@@ -132,6 +140,10 @@ return [
 
                 'repeater' => [
                     'due-terms' => [
+                        'preview' => [
+                            'empty' => 'No due terms defined to preview',
+                        ],
+
                         'entries' => [
                             'value'                  => 'Value',
                             'due'                    => 'Due',

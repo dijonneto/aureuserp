@@ -31,18 +31,18 @@ class Products extends SettingsPage
     public function getBreadcrumbs(): array
     {
         return [
-            __('Manage Products'),
+            __('invoices::filament/clusters/settings/pages/manage-products.title'),
         ];
     }
 
     public function getTitle(): string
     {
-        return __('Manage Products');
+        return __('invoices::filament/clusters/settings/pages/manage-products.title');
     }
 
     public static function getNavigationLabel(): string
     {
-        return __('Manage Products');
+        return __('invoices::filament/clusters/settings/pages/manage-products.title');
     }
 
     public function form(Schema $schema): Schema
@@ -50,8 +50,8 @@ class Products extends SettingsPage
         return $schema
             ->components([
                 Toggle::make('enable_uom')
-                    ->label(__('Unit of Measure'))
-                    ->helperText(__('Sell and purchase products in different units of measure')),
+                    ->label(__('invoices::filament/clusters/settings/pages/manage-products.form.enable-uom'))
+                    ->helperText(__('invoices::filament/clusters/settings/pages/manage-products.form.enable-uom-helper-text')),
             ]);
     }
 }

@@ -19,33 +19,33 @@ class ListPayments extends ListRecords
     public function getPresetTableViews(): array
     {
         return [
-            'customer_payments' => PresetView::make(__('Customer Payments'))
+            'customer_payments' => PresetView::make(__('accounts::filament/resources/payment/pages/list-payments.tabs.customer-payments'))
                 ->favorite()
                 ->icon('heroicon-s-banknotes')
                 ->modifyQueryUsing(fn (Builder $query) => $query->where('partner_type', 'customer')),
-            'vendor_payments' => PresetView::make(__('Vendor Payments'))
+            'vendor_payments' => PresetView::make(__('accounts::filament/resources/payment/pages/list-payments.tabs.vendor-payments'))
                 ->favorite()
                 ->icon('heroicon-s-banknotes')
                 ->modifyQueryUsing(fn (Builder $query) => $query->where('partner_type', 'supplier')),
-            'draft' => PresetView::make(__('Draft'))
+            'draft' => PresetView::make(__('accounts::filament/resources/payment/pages/list-payments.tabs.draft'))
                 ->favorite()
                 ->setAsDefault()
                 ->icon('heroicon-s-stop')
                 ->modifyQueryUsing(fn (Builder $query) => $query->where('state', PaymentStatus::DRAFT->value)),
-            'in_process' => PresetView::make(__('In Process'))
+            'in_process' => PresetView::make(__('accounts::filament/resources/payment/pages/list-payments.tabs.in-process'))
                 ->favorite()
                 ->icon('heroicon-s-play')
                 ->modifyQueryUsing(fn (Builder $query) => $query->where('state', PaymentStatus::IN_PROCESS->value)),
-            'is_sent' => PresetView::make(__('Sent'))
+            'is_sent' => PresetView::make(__('accounts::filament/resources/payment/pages/list-payments.tabs.sent'))
                 ->icon('heroicon-s-play')
                 ->modifyQueryUsing(fn (Builder $query) => $query->where('is_sent', true)),
-            'not_sent' => PresetView::make(__('No Sent'))
+            'not_sent' => PresetView::make(__('accounts::filament/resources/payment/pages/list-payments.tabs.not-sent'))
                 ->icon('heroicon-s-play')
                 ->modifyQueryUsing(fn (Builder $query) => $query->where('is_sent', false)),
-            'no_bank_matching' => PresetView::make(__('No Bank Matching'))
+            'no_bank_matching' => PresetView::make(__('accounts::filament/resources/payment/pages/list-payments.tabs.no-bank-matching'))
                 ->icon('heroicon-s-play')
                 ->modifyQueryUsing(fn (Builder $query) => $query->where('is_matched', false)),
-            'is_reconciled' => PresetView::make(__('Reconciled'))
+            'is_reconciled' => PresetView::make(__('accounts::filament/resources/payment/pages/list-payments.tabs.reconciled'))
                 ->icon('heroicon-s-play')
                 ->modifyQueryUsing(fn (Builder $query) => $query->where('is_reconciled', true)),
         ];

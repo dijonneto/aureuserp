@@ -467,7 +467,7 @@ class JournalResource extends Resource
                     ->schema([
                         Group::make()
                             ->schema([
-                                Tabs::make('Journal Information')
+                                Tabs::make(__('accounts::filament/resources/journal.infolist.tabs.title'))
                                     ->tabs([
                                         Tab::make(__('accounts::filament/resources/journal.infolist.tabs.journal-entries.title'))
                                             ->schema([

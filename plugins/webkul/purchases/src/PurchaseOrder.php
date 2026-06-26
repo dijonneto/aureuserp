@@ -463,7 +463,7 @@ class PurchaseOrder
             $rounding = $line->uom->rounding;
 
             if (float_compare($line->product_qty, $line->qty_received, precisionRounding: $rounding) < 0) {
-                throw new \Exception(__('You cannot decrease the ordered quantity below the received quantity.\nCreate a return first.'));
+                throw new \Exception(__('purchases::app.exceptions.ordered-quantity-below-received'));
             }
 
             $lineOperations = $line->inventoryMoves

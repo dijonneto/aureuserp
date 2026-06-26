@@ -22,12 +22,12 @@ class ActivityTypeResource extends BaseActivityTypeResource
 
     public static function getModelLabel(): string
     {
-        return __('Activity Type');
+        return __('sales::filament/clusters/configurations/resources/activity-type.model-label');
     }
 
     public static function getNavigationGroup(): ?string
     {
-        return __('Activities');
+        return __('sales::filament/clusters/configurations/resources/activity-type.navigation.group');
     }
 
     public static function getPages(): array

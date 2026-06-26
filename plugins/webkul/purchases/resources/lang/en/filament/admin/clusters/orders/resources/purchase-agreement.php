@@ -197,6 +197,8 @@ return [
         ],
 
         'tabs' => [
+            'title' => 'Tabs',
+
             'products' => [
                 'title' => 'Products',
 

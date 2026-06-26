@@ -53,7 +53,7 @@ class TagResource extends Resource
                 TextInput::make('name')
                     ->label(__('sales::filament/clusters/configurations/resources/tag.form.fields.name'))
                     ->required()
-                    ->placeholder(__('Name')),
+                                    ->placeholder(__('sales::filament/clusters/configurations/resources/tag.form.fields.name')),
                 ColorPicker::make('color')
                     ->label(__('sales::filament/clusters/configurations/resources/tag.form.fields.color'))
                     ->hexColor(),

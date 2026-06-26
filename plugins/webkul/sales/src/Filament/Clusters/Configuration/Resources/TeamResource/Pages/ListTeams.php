@@ -23,9 +23,9 @@ class ListTeams extends ListRecords
     public function getTabs(): array
     {
         return [
-            'all' => Tab::make(__('All'))
+            'all' => Tab::make(__('sales::filament/clusters/configurations/resources/team/pages/list-teams.tabs.all'))
                 ->badge(Team::count()),
-            'archived' => Tab::make(__('Archived'))
+            'archived' => Tab::make(__('sales::filament/clusters/configurations/resources/team/pages/list-teams.tabs.archived'))
                 ->badge(Team::onlyTrashed()->count())
                 ->modifyQueryUsing(fn ($query) => $query->onlyTrashed()),
         ];

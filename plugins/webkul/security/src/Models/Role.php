@@ -30,13 +30,13 @@ class Role extends BaseRole
             }
 
             if ($role->isDirty(['name', 'guard_name'])) {
-                throw new AuthorizationException(__('You are not allowed to modify this system role.'));
+                throw new AuthorizationException(__('security::filament/resources/role.exceptions.system-role-update'));
             }
         });
 
         static::deleting(function (self $role): void {
             if ($role->isSystemRole()) {
-                throw new AuthorizationException(__('You are not allowed to delete this system role.'));
+                throw new AuthorizationException(__('security::filament/resources/role.exceptions.system-role-delete'));
             }
         });
     }

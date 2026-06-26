@@ -654,7 +654,7 @@ class PurchaseAgreementResource extends Resource
                             ]),
                     ]),
 
-                Tabs::make('Tabs')
+                Tabs::make(__('purchases::filament/admin/clusters/orders/resources/purchase-agreement.infolist.tabs.title'))
                     ->tabs([
                         Tab::make(__('purchases::filament/admin/clusters/orders/resources/purchase-agreement.infolist.tabs.products.title'))
                             ->icon('heroicon-o-cube')

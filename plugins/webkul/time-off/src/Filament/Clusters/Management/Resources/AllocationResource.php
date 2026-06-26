@@ -131,7 +131,7 @@ class AllocationResource extends Resource
                                     ->options(AllocationType::class)
                                     ->default(AllocationType::REGULAR->value)
                                     ->required(),
-                                Fieldset::make('Validity Period')
+                                Fieldset::make(__('time-off::filament/clusters/management/resources/allocation.form.fields.validity-period'))
                                     ->schema([
                                         DatePicker::make('date_from')
                                             ->label(__('time-off::filament/clusters/management/resources/allocation.form.fields.date-from'))

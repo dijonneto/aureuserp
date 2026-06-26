@@ -31,12 +31,12 @@ class PackagingResource extends BasePackagingResource
 
     public static function getNavigationGroup(): string
     {
-        return __('Packagings');
+        return __('sales::filament/clusters/configurations/resources/packaging.navigation.group');
     }
 
     public static function getNavigationLabel(): string
     {
-        return __('Products');
+        return __('sales::filament/clusters/configurations/resources/packaging.navigation.title');
     }
 
     public static function getPages(): array

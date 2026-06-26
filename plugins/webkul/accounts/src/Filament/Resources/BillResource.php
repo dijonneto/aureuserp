@@ -483,7 +483,7 @@ class BillResource extends Resource
                     ->money(fn ($record) => $record->currency?->name)
                     ->toggleable(isToggledHiddenByDefault: false),
                 TextColumn::make('payment_state')
-                    ->label(__('Payment State'))
+                    ->label(__('accounts::filament/resources/bill.table.columns.payment-state'))
                     ->placeholder('-')
                     ->color(fn (PaymentState $state) => $state->getColor())
                     ->icon(fn (PaymentState $state) => $state->getIcon())

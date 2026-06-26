@@ -66,7 +66,7 @@ class OperationInfolist
                     ]),
 
                 // Tabs Section
-                Tabs::make('Details')
+                Tabs::make(__('inventories::filament/clusters/operations/resources/operation.infolist.tabs.details.title'))
                     ->tabs([
                         // Operations Tab
                         Tab::make(__('inventories::filament/clusters/operations/resources/operation.infolist.tabs.operations.title'))

@@ -547,7 +547,7 @@ class JobPositionResource extends Resource
                                         ->listWithLineBreaks()
                                         ->badge()
                                         ->listWithLineBreaks()
-                                        ->label(__('Expected Skills')),
+                                        ->label(__('recruitments::filament/clusters/configurations/resources/job-position.infolist.sections.position-status.entries.expected-skills')),
                                 ]),
                         ])->columnSpan(1),
                     ])->columnSpanFull(),

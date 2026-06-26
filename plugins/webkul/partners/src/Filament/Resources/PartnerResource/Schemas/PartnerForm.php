@@ -123,11 +123,11 @@ class PartnerForm
                     ->schema([
                         TextInput::make('tax_id')
                             ->label(__('partners::filament/resources/partner.form.sections.general.fields.tax-id'))
-                            ->placeholder('e.g. 29ABCDE1234F1Z5')
+                            ->placeholder(__('partners::filament/resources/partner.form.sections.general.fields.tax-id-placeholder'))
                             ->maxLength(255),
                         TextInput::make('job_title')
                             ->label(__('partners::filament/resources/partner.form.sections.general.fields.job-title'))
-                            ->placeholder('e.g. CEO')
+                            ->placeholder(__('partners::filament/resources/partner.form.sections.general.fields.job-title-placeholder'))
                             ->maxLength(255)
                             ->visible(fn (Get $get): bool => in_array($get('account_type'), [AccountType::INDIVIDUAL, AccountType::INDIVIDUAL->value], true)),
                         TextInput::make('phone')
@@ -183,7 +183,7 @@ class PartnerForm
                                     ->columns(2),
                             ]),
 
-                        Fieldset::make('Address')
+                        Fieldset::make(__('partners::filament/resources/partner.form.sections.general.address.title'))
                             ->schema([
                                 TextInput::make('street1')
                                     ->label(__('partners::filament/resources/partner.form.sections.general.address.fields.street1'))
@@ -262,7 +262,7 @@ class PartnerForm
         return Tab::make(__('partners::filament/resources/partner.form.tabs.sales-purchase.title'))
             ->icon('heroicon-o-currency-dollar')
             ->schema(array_merge([
-                Fieldset::make('Sales')
+                Fieldset::make(__('partners::filament/resources/partner.form.tabs.sales-purchase.sections.sales.title'))
                     ->schema(array_merge([
                         Select::make('user_id')
                             ->label(__('partners::filament/resources/partner.form.tabs.sales-purchase.fields.responsible'))
@@ -273,7 +273,7 @@ class PartnerForm
                     ], Registry::renderForm('sales.fields')))
                     ->columns(1),
 
-                Fieldset::make('Others')
+                Fieldset::make(__('partners::filament/resources/partner.form.tabs.sales-purchase.sections.others.title'))
                     ->schema([
                         TextInput::make('company_registry')
                             ->label(__('partners::filament/resources/partner.form.tabs.sales-purchase.fields.company-id'))

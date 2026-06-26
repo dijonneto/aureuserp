@@ -15,9 +15,9 @@ enum RecruitmentState: string implements HasColor, HasIcon, HasLabel
     public function getLabel(): string
     {
         return match ($this) {
-            self::NORMAL  => __('In Progress'),
-            self::DONE    => __('Ready for next stage'),
-            self::BLOCKED => __('Blocked'),
+            self::NORMAL  => __('recruitments::enums/recruitment-state.in-progress'),
+            self::DONE    => __('recruitments::enums/recruitment-state.ready-for-next-stage'),
+            self::BLOCKED => __('recruitments::enums/recruitment-state.blocked'),
         };
     }
 
@@ -42,9 +42,9 @@ enum RecruitmentState: string implements HasColor, HasIcon, HasLabel
     public static function options(): array
     {
         return [
-            self::NORMAL->value  => __('Normal'),
-            self::DONE->value    => __('Done'),
-            self::BLOCKED->value => __('Blocked'),
+            self::NORMAL->value  => __('recruitments::enums/recruitment-state.normal'),
+            self::DONE->value    => __('recruitments::enums/recruitment-state.done'),
+            self::BLOCKED->value => __('recruitments::enums/recruitment-state.blocked'),
         ];
     }
 }

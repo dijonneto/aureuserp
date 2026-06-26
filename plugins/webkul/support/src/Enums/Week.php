@@ -21,13 +21,13 @@ enum Week: string
     public static function options(): array
     {
         return [
-            self::SUNDAY->value    => __('Sunday'),
-            self::MONDAY->value    => __('Monday'),
-            self::TUESDAY->value   => __('Tuesday'),
-            self::WEDNESDAY->value => __('Wednesday'),
-            self::THURSDAY->value  => __('Thursday'),
-            self::FRIDAY->value    => __('Friday'),
-            self::SATURDAY->value  => __('Saturday'),
+            self::SUNDAY->value    => __('support::enums/day-of-week.sunday'),
+            self::MONDAY->value    => __('support::enums/day-of-week.monday'),
+            self::TUESDAY->value   => __('support::enums/day-of-week.tuesday'),
+            self::WEDNESDAY->value => __('support::enums/day-of-week.wednesday'),
+            self::THURSDAY->value  => __('support::enums/day-of-week.thursday'),
+            self::FRIDAY->value    => __('support::enums/day-of-week.friday'),
+            self::SATURDAY->value  => __('support::enums/day-of-week.saturday'),
         ];
     }
 }

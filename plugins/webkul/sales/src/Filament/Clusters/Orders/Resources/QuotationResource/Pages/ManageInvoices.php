@@ -22,7 +22,7 @@ class ManageInvoices extends ManageRelatedRecords
 
     public static function getNavigationLabel(): string
     {
-        return __('Invoices');
+        return __('sales::filament/clusters/orders/resources/quotation/pages/manage-invoices.navigation.title');
     }
 
     public static function getNavigationBadge($parameters = []): ?string

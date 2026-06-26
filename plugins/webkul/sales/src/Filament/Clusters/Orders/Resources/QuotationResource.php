@@ -232,7 +232,7 @@ class QuotationResource extends Resource
                                     ->reactive()
                                     ->visible(fn (Get $get) => $get('currency_id') && ! empty($get('products'))),
                             ]),
-                        Tab::make(__('Optional Products'))
+                        Tab::make(__('sales::filament/clusters/orders/resources/quotation.form.tabs.order-line.repeater.product-optional.title'))
                             ->hidden(fn ($record) => in_array($record?->state, [OrderState::CANCEL]))
                             ->icon('heroicon-o-arrow-path-rounded-square')
                             ->schema(function (Set $set, Get $get) {
@@ -571,40 +571,31 @@ class QuotationResource extends Resource
             ])
             ->groups([
                 Tables\Grouping\Group::make('medium.name')
-                    ->label(__('Medium'))
                     ->label(__('sales::filament/clusters/orders/resources/quotation.table.groups.medium'))
                     ->collapsible(),
                 Tables\Grouping\Group::make('utmSource.name')
-                    ->label(__('Source'))
                     ->label(__('sales::filament/clusters/orders/resources/quotation.table.groups.source'))
                     ->collapsible(),
                 Tables\Grouping\Group::make('team.name')
-                    ->label(__('Team'))
                     ->label(__('sales::filament/clusters/orders/resources/quotation.table.groups.team'))
                     ->collapsible(),
                 Tables\Grouping\Group::make('user.name')
-                    ->label(__('Sales Person'))
                     ->label(__('sales::filament/clusters/orders/resources/quotation.table.groups.sales-person'))
                     ->collapsible(),
                 Tables\Grouping\Group::make('currency.full_name')
-                    ->label(__('Currency'))
                     ->label(__('sales::filament/clusters/orders/resources/quotation.table.groups.currency'))
                     ->collapsible(),
                 Tables\Grouping\Group::make('company.name')
-                    ->label(__('Company'))
                     ->label(__('sales::filament/clusters/orders/resources/quotation.table.groups.company'))
                     ->collapsible(),
                 Tables\Grouping\Group::make('partner.name')
-                    ->label(__('Customer'))
                     ->label(__('sales::filament/clusters/orders/resources/quotation.table.groups.customer'))
                     ->collapsible(),
                 Tables\Grouping\Group::make('date_order')
-                    ->label(__('Quotation Date'))
                     ->label(__('sales::filament/clusters/orders/resources/quotation.table.groups.quotation-date'))
                     ->date()
                     ->collapsible(),
                 Tables\Grouping\Group::make('commitment_date')
-                    ->label(__('Commitment Date'))
                     ->label(__('sales::filament/clusters/orders/resources/quotation.table.groups.commitment-date'))
                     ->date()
                     ->collapsible(),
@@ -927,7 +918,7 @@ class QuotationResource extends Resource
                                     ->key('quotation-summary-view'),
                             ]),
 
-                        Tab::make(__('Optional Products'))
+                        Tab::make(__('sales::filament/clusters/orders/resources/quotation.form.tabs.order-line.repeater.product-optional.title'))
                             ->icon('heroicon-o-arrow-path-rounded-square')
                             ->hidden(fn ($record) => $record->optionalLines->isEmpty())
                             ->schema([

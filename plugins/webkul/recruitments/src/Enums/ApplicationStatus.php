@@ -16,10 +16,10 @@ enum ApplicationStatus: string implements HasColor, HasIcon, HasLabel
     public function getLabel(): string
     {
         return match ($this) {
-            self::ONGOING   => __('Ongoing'),
-            self::HIRED     => __('Hired'),
-            self::REFUSED   => __('Refused'),
-            self::ARCHIVED  => __('Archived'),
+            self::ONGOING   => __('recruitments::enums/application-status.ongoing'),
+            self::HIRED     => __('recruitments::enums/application-status.hired'),
+            self::REFUSED   => __('recruitments::enums/application-status.refused'),
+            self::ARCHIVED  => __('recruitments::enums/application-status.archived'),
         };
     }
 
@@ -46,10 +46,10 @@ enum ApplicationStatus: string implements HasColor, HasIcon, HasLabel
     public static function options(): array
     {
         return [
-            self::ONGOING->value  => 'Ongoing',
-            self::HIRED->value    => 'Hired',
-            self::REFUSED->value  => 'Refused',
-            self::ARCHIVED->value => 'Archived',
+            self::ONGOING->value  => self::ONGOING->getLabel(),
+            self::HIRED->value    => self::HIRED->getLabel(),
+            self::REFUSED->value  => self::REFUSED->getLabel(),
+            self::ARCHIVED->value => self::ARCHIVED->getLabel(),
         ];
     }
 }

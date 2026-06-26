@@ -10,6 +10,7 @@ return [
         ],
 
         'refuse' => [
+            'label'        => 'Refuse',
             'title'        => 'Refuse Reason',
             'form'         => [
                 'fields' => [
@@ -24,6 +25,7 @@ return [
         ],
 
         'reopen' => [
+            'label'        => 'Restore',
             'title'        => 'Restore Applicant from refuse',
             'notification' => [
                 'title' => 'Applicant reopened',

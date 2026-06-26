@@ -143,7 +143,7 @@ class CandidateResource extends Resource
                         Section::make(__('recruitments::filament/clusters/applications/resources/candidate.form.sections.status-and-evaluation.title'))
                             ->schema([
                                 Toggle::make('is_active')
-                                    ->label(__('Status'))
+                                    ->label(__('recruitments::filament/clusters/applications/resources/candidate.form.sections.status-and-evaluation.title'))
                                     ->inline(false)
                                     ->default(true),
                                 TextEntry::make('evaluation')
@@ -390,7 +390,7 @@ class CandidateResource extends Resource
                                     ->schema([
                                         IconEntry::make('is_active')
                                             ->boolean()
-                                            ->label(__('Status')),
+                                            ->label(__('recruitments::filament/clusters/applications/resources/candidate.infolist.sections.status-and-evaluation.title')),
                                         TextEntry::make('priority')
                                             ->label(__('recruitments::filament/clusters/applications/resources/candidate.infolist.sections.status-and-evaluation.entries.evaluation'))
                                             ->formatStateUsing(function ($state) {

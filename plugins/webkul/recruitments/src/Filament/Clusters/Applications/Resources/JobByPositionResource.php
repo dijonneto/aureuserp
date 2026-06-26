@@ -56,14 +56,12 @@ class JobByPositionResource extends Resource
                     Stack::make([
                         TextColumn::make('name')
                             ->weight(FontWeight::Bold)
-                            ->label(__('Name'))
                             ->label(__('recruitments::filament/clusters/applications/resources/job-by-application.table.columns.name'))
                             ->searchable()
                             ->sortable(),
                         Stack::make([
                             TextColumn::make('department.manager.name')
                                 ->icon('heroicon-m-briefcase')
-                                ->label(__('Manager'))
                                 ->label(__('recruitments::filament/clusters/applications/resources/job-by-application.table.columns.manager-name'))
                                 ->sortable()
                                 ->searchable(),

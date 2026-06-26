@@ -38,6 +38,7 @@ return [
                     'location'             => 'Location',
                     'work-address'         => 'Work Address',
                     'work-location'        => 'Work Location',
+                    'approvers'            => 'Approvers',
                     'approver'             => 'Approver',
                     'time-off'             => 'Time Off',
                     'attendance-manager'   => 'Attendance Manager',

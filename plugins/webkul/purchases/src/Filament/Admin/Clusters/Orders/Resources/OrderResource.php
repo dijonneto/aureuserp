@@ -656,7 +656,7 @@ class OrderResource extends Resource
                             ]),
                     ]),
 
-                Tabs::make('Tabs')
+                Tabs::make(__('purchases::filament/admin/clusters/orders/resources/order.infolist.tabs.title'))
                     ->tabs([
                         Tab::make(__('purchases::filament/admin/clusters/orders/resources/order.infolist.tabs.products.title'))
                             ->schema([

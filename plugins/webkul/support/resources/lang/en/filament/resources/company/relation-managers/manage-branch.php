@@ -185,6 +185,8 @@ return [
     ],
 
     'infolist' => [
+        'title' => 'Branch Information',
+
         'tabs' => [
             'general-information' => [
                 'title' => 'General Information',

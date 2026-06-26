@@ -15,7 +15,9 @@ return [
                     'company'    => 'Company',
                     'avatar'     => 'Avatar',
                     'tax-id'     => 'Tax ID',
+                    'tax-id-placeholder' => 'e.g. 29ABCDE1234F1Z5',
                     'job-title'  => 'Job Title',
+                    'job-title-placeholder' => 'e.g. CEO',
                     'phone'      => 'Phone',
                     'mobile'     => 'Mobile',
                     'email'      => 'Email',
@@ -47,6 +49,16 @@ return [
         'tabs' => [
             'sales-purchase' => [
                 'title' => 'Sales and Purchases',
+
+                'sections' => [
+                    'sales' => [
+                        'title' => 'Sales',
+                    ],
+
+                    'others' => [
+                        'title' => 'Others',
+                    ],
+                ],
 
                 'fields' => [
                     'responsible'           => 'Responsible',
@@ -202,8 +214,20 @@ return [
         ],
 
         'tabs' => [
+            'title' => 'Tabs',
+
             'sales-purchase' => [
                 'title' => 'Sales and Purchases',
+
+                'sections' => [
+                    'sales' => [
+                        'title' => 'Sales',
+                    ],
+
+                    'others' => [
+                        'title' => 'Others',
+                    ],
+                ],
 
                 'fields' => [
                     'responsible'           => 'Responsible',

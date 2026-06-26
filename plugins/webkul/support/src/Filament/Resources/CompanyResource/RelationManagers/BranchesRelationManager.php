@@ -396,7 +396,7 @@ class BranchesRelationManager extends RelationManager
     {
         return $schema
             ->components([
-                Tabs::make('Branch Information')
+                Tabs::make(__('support::filament/resources/company/relation-managers/manage-branch.infolist.title'))
                     ->tabs([
                         Tab::make(__('support::filament/resources/company/relation-managers/manage-branch.infolist.tabs.general-information.title'))
                             ->schema([

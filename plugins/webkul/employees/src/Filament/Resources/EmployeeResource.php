@@ -1441,7 +1441,7 @@ class EmployeeResource extends Resource
                                                         ->label(__('employees::filament/resources/employee.infolist.tabs.work-information.entries.work-location'))
                                                         ->icon('heroicon-o-building-office'),
                                                 ]),
-                                            Fieldset::make('Approvers')
+                                            Fieldset::make(__('employees::filament/resources/employee.infolist.tabs.work-information.entries.approvers'))
                                                 ->schema([
                                                     TextEntry::make('leaveManager.name')
                                                         ->label(__('employees::filament/resources/employee.infolist.tabs.work-information.entries.time-off'))

@@ -33,4 +33,8 @@ return [
         'terms-and-conditions' => 'Terms & Conditions:',
         'additional-terms' => 'Additional Terms:',
     ],
+
+    'exceptions' => [
+        'ordered-quantity-below-received' => "You cannot decrease the ordered quantity below the received quantity.\nCreate a return first.",
+    ],
 ];

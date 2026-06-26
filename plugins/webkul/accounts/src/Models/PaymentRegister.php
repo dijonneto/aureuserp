@@ -221,22 +221,22 @@ class PaymentRegister extends Model
                 $switchAmount = 0.0;
             } else {
                 $switchAmount = $totalAmountValues['amount_by_default'];
-                $htmlLines[] = __('This is the full amount.');
-                $htmlLines[] = __('Consider paying in installments instead.');
+                $htmlLines[] = __('accounts::models/payment-register.installment-switch.full-amount');
+                $htmlLines[] = __('accounts::models/payment-register.installment-switch.consider-installments');
             }
         } elseif ($this->installments_mode === 'overdue') {
             $switchAmount = $totalAmountValues['full_amount'];
-            $htmlLines[] = __('This is the overdue amount.');
-            $htmlLines[] = __('Consider paying the full amount.');
+            $htmlLines[] = __('accounts::models/payment-register.installment-switch.overdue-amount');
+            $htmlLines[] = __('accounts::models/payment-register.installment-switch.consider-full-amount');
         } elseif ($this->installments_mode === 'before_date') {
             $switchAmount = $totalAmountValues['full_amount'];
             $nextPaymentDate = $this->getNextPaymentDateInContext();
-            $htmlLines[] = __('Total for the installments before :date.', ['date' => $nextPaymentDate ?? now()->format('Y-m-d')]);
-            $htmlLines[] = __('Consider paying the full amount.');
+            $htmlLines[] = __('accounts::models/payment-register.installment-switch.before-date-total', ['date' => $nextPaymentDate ?? now()->format('Y-m-d')]);
+            $htmlLines[] = __('accounts::models/payment-register.installment-switch.consider-full-amount');
         } elseif ($this->installments_mode === 'next') {
             $switchAmount = $totalAmountValues['full_amount'];
-            $htmlLines[] = __('This is the next unreconciled installment.');
-            $htmlLines[] = __('Consider paying the full amount.');
+            $htmlLines[] = __('accounts::models/payment-register.installment-switch.next-unreconciled');
+            $htmlLines[] = __('accounts::models/payment-register.installment-switch.consider-full-amount');
         }
 
         if ($this->custom_user_amount) {

@@ -112,7 +112,8 @@ class ViewApplicant extends ViewRecord
                         ->title(__('recruitments::filament/clusters/applications/resources/applicant/pages/view-applicant.header-actions.delete.notification.title'))
                         ->body(__('recruitments::filament/clusters/applications/resources/applicant/pages/view-applicant.header-actions.delete.notification.body'))
                 ),
-            Action::make('Refuse')
+            Action::make('refuse')
+                ->label(__('recruitments::filament/clusters/applications/resources/applicant/pages/view-applicant.header-actions.refuse.label'))
                 ->modalIcon('heroicon-s-bug-ant')
                 ->hidden(fn ($record) => $record->refuse_reason_id || $record->application_status->value === ApplicationStatus::ARCHIVED->value)
                 ->modalHeading(__('recruitments::filament/clusters/applications/resources/applicant/pages/view-applicant.header-actions.refuse.title'))
@@ -160,7 +161,8 @@ class ViewApplicant extends ViewRecord
                         ->body(__('recruitments::filament/clusters/applications/resources/applicant/pages/view-applicant.header-actions.refuse.notification.body'))
                         ->send();
                 }),
-            Action::make('Restore')
+            Action::make('restore')
+                ->label(__('recruitments::filament/clusters/applications/resources/applicant/pages/view-applicant.header-actions.reopen.label'))
                 ->hidden(fn ($record) => ! $record->refuse_reason_id)
                 ->modalHeading(__('recruitments::filament/clusters/applications/resources/applicant/pages/view-applicant.header-actions.reopen.title'))
                 ->requiresConfirmation()

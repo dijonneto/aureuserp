@@ -2059,18 +2059,18 @@ class AccountManager
         }
 
         if ($lines->contains(fn ($line) => $line->reconciled)) {
-            throw new Exception(__('You are trying to reconcile some entries that are already reconciled.'));
+            throw new Exception(__('accounts::account-manager.reconciliation.already-reconciled'));
         }
 
         if ($lines->contains(fn ($line) => $line->parent_state != MoveState::POSTED)) {
-            throw new Exception(__('You can only reconcile posted entries.'));
+            throw new Exception(__('accounts::account-manager.reconciliation.posted-only'));
         }
 
         $accounts = $lines->pluck('account')->unique();
 
         if ($accounts->count() > 1) {
             throw new Exception(__(
-                'Entries are not from the same account: :accounts',
+                'accounts::account-manager.reconciliation.same-account-required',
                 ['accounts' => $accounts->pluck('display_name')->implode(', ')]
             ));
         }

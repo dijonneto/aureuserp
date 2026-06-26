@@ -56,9 +56,8 @@ class FiscalPositionResource extends Resource
                                 TextInput::make('name')
                                     ->label(__('accounts::filament/resources/fiscal-position.form.fields.name'))
                                     ->required()
-                                    ->placeholder(__('Name')),
+                                    ->placeholder(__('accounts::filament/resources/fiscal-position.form.fields.name')),
                                 TextInput::make('foreign_vat')
-                                    ->label(__('Foreign VAT'))
                                     ->label(__('accounts::filament/resources/fiscal-position.form.fields.foreign-vat'))
                                     ->required(),
                                 Select::make('country_id')
@@ -91,16 +90,16 @@ class FiscalPositionResource extends Resource
                         RichEditor::make('notes')
                             ->label(__('accounts::filament/resources/fiscal-position.form.fields.notes')),
                     ])->columnSpanFull(),
-                Tabs::make('Mappings')
+                Tabs::make(__('accounts::filament/resources/fiscal-position.form.tabs.mappings.title'))
                     ->tabs([
-                        Tab::make('Tax Mapping')
+                        Tab::make(__('accounts::filament/resources/fiscal-position.form.tabs.tax-mapping.title'))
                             ->schema([
                                 Repeater::make('taxes')
                                     ->hiddenLabel()
                                     ->relationship('taxes')
                                     ->compact()
                                     ->reactive()
-                                    ->addActionLabel(__('Add Tax Mapping'))
+                                    ->addActionLabel(__('accounts::filament/resources/fiscal-position.form.tabs.tax-mapping.actions.add-tax-mapping'))
                                     ->table([
                                         TableColumn::make('tax_source_id')
                                             ->label(__('accounts::filament/resources/fiscal-position.form.tabs.tax-mapping.table.columns.tax-source'))
@@ -128,14 +127,14 @@ class FiscalPositionResource extends Resource
                                     ])
                                     ->columns(2),
                             ]),
-                        Tab::make('Account Mapping')
+                        Tab::make(__('accounts::filament/resources/fiscal-position.form.tabs.account-mapping.title'))
                             ->schema([
                                 Repeater::make('accounts')
                                     ->hiddenLabel()
                                     ->relationship('accounts')
                                     ->compact()
                                     ->reactive()
-                                    ->addActionLabel(__('Add Account Mapping'))
+                                    ->addActionLabel(__('accounts::filament/resources/fiscal-position.form.tabs.account-mapping.actions.add-account-mapping'))
                                     ->table([
                                         TableColumn::make('account_source_id')
                                             ->label(__('accounts::filament/resources/fiscal-position.form.tabs.account-mapping.table.columns.source-account'))
@@ -210,7 +209,6 @@ class FiscalPositionResource extends Resource
                 IconColumn::make('auto_reply')
                     ->searchable()
                     ->sortable()
-                    ->label(__('Detect Automatically'))
                     ->label(__('accounts::filament/resources/fiscal-position.table.columns.detect-automatically')),
             ])
             ->recordActions([
@@ -281,9 +279,9 @@ class FiscalPositionResource extends Resource
                             ->placeholder('-')
                             ->markdown(),
                     ])->columnSpanFull(),
-                Tabs::make('Mappings')
-                    ->tabs([
-                        Tab::make('Tax Mapping')
+                                Tabs::make(__('accounts::filament/resources/fiscal-position.infolist.tabs.mappings.title'))
+                                    ->tabs([
+                                        Tab::make(__('accounts::filament/resources/fiscal-position.infolist.tabs.tax-mapping.title'))
                             ->schema([
                                 RepeatableEntry::make('taxes')
                                     ->hiddenLabel()
@@ -305,7 +303,7 @@ class FiscalPositionResource extends Resource
                                             ->placeholder('-'),
                                     ]),
                             ]),
-                        Tab::make('Account Mapping')
+                                        Tab::make(__('accounts::filament/resources/fiscal-position.infolist.tabs.account-mapping.title'))
                             ->schema([
                                 RepeatableEntry::make('accounts')
                                     ->hiddenLabel()

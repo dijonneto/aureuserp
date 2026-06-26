@@ -42,4 +42,10 @@ return [
             'account-details'       => 'on this account details:',
         ],
     ],
+
+    'reconciliation' => [
+        'already-reconciled'    => 'You are trying to reconcile some entries that are already reconciled.',
+        'posted-only'           => 'You can only reconcile posted entries.',
+        'same-account-required' => 'Entries are not from the same account: :accounts',
+    ],
 ];

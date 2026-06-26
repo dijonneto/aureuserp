@@ -119,21 +119,21 @@ class TaxResource extends Resource
                                 Toggle::make('include_base_amount')
                                     ->inline(false)
                                     ->label(__('accounts::filament/resources/tax.form.sections.field-set.advanced-options.fields.include-base-amount'))
-                                    ->hintIcon('heroicon-o-question-mark-circle', tooltip: __('If set, taxes with a higher sequence than this one will be affected by it, provided they accept it.')),
+                                    ->hintIcon('heroicon-o-question-mark-circle', tooltip: __('accounts::filament/resources/tax.form.sections.field-set.advanced-options.fields.include-base-amount-tooltip')),
                                 Toggle::make('is_base_affected')
                                     ->inline(false)
                                     ->label(__('accounts::filament/resources/tax.form.sections.field-set.advanced-options.fields.is-base-affected'))
-                                    ->hintIcon('heroicon-o-question-mark-circle', tooltip: __('If set, taxes with a lower sequence might affect this one, provided they try to do it.')),
+                                    ->hintIcon('heroicon-o-question-mark-circle', tooltip: __('accounts::filament/resources/tax.form.sections.field-set.advanced-options.fields.is-base-affected-tooltip')),
                             ]),
                     ]),
 
-                Tabs::make('Tax Configuration')
+                Tabs::make(__('accounts::filament/resources/tax.form.tabs.tax-configuration.title'))
                     ->tabs([
-                        Tab::make('Repartition Lines')
+                        Tab::make(__('accounts::filament/resources/tax.form.tabs.tax-configuration.repartition-lines.title'))
                             ->icon('heroicon-o-banknotes')
                             ->schema([
-                                Section::make('Invoice & Refund Distribution')
-                                    ->description('Define how this tax affects accounts for invoices and refunds.')
+                                Section::make(__('accounts::filament/resources/tax.form.tabs.tax-configuration.repartition-lines.sections.invoice-refund-distribution.title'))
+                                    ->description(__('accounts::filament/resources/tax.form.tabs.tax-configuration.repartition-lines.sections.invoice-refund-distribution.description'))
                                     ->schema([
                                         Group::make()
                                             ->schema([
@@ -260,7 +260,7 @@ class TaxResource extends Resource
 
                             ]),
 
-                        Tab::make('Descriptions')
+                        Tab::make(__('accounts::filament/resources/tax.form.tabs.tax-configuration.descriptions.title'))
                             ->icon('heroicon-o-document-text')
                             ->schema([
                                 RichEditor::make('description')
@@ -287,7 +287,6 @@ class TaxResource extends Resource
                     ->label(__('accounts::filament/resources/tax.table.columns.company'))
                     ->sortable(),
                 TextColumn::make('taxGroup.name')
-                    ->label(__('Tax Group'))
                     ->label(__('accounts::filament/resources/tax.table.columns.tax-group'))
                     ->searchable()
                     ->sortable(),

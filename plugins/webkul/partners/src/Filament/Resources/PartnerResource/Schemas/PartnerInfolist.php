@@ -112,7 +112,7 @@ class PartnerInfolist
                             ->visible(fn ($record): bool => (bool) $record->tags()->count()),
                     ]),
 
-                Fieldset::make('Address')
+                Fieldset::make(__('partners::filament/resources/partner.infolist.sections.general.address.title'))
                     ->schema([
                         TextEntry::make('street1')
                             ->label(__('partners::filament/resources/partner.infolist.sections.general.address.fields.street1'))
@@ -143,7 +143,7 @@ class PartnerInfolist
 
     public static function tabs(): Tabs
     {
-        return Tabs::make('Tabs')
+        return Tabs::make(__('partners::filament/resources/partner.infolist.tabs.title'))
             ->tabs(array_merge(
                 [static::salesPurchaseTab()],
                 Registry::renderInfolist('tabs.append'),
@@ -156,7 +156,7 @@ class PartnerInfolist
         return Tab::make(__('partners::filament/resources/partner.infolist.tabs.sales-purchase.title'))
             ->icon('heroicon-o-currency-dollar')
             ->schema(array_merge([
-                Section::make('Sales')
+                Section::make(__('partners::filament/resources/partner.infolist.tabs.sales-purchase.sections.sales.title'))
                     ->schema(array_merge([
                         TextEntry::make('user.name')
                             ->label(__('partners::filament/resources/partner.infolist.tabs.sales-purchase.fields.responsible'))
@@ -164,7 +164,7 @@ class PartnerInfolist
                     ], Registry::renderInfolist('sales.fields')))
                     ->columns(1),
 
-                Section::make('Others')
+                Section::make(__('partners::filament/resources/partner.infolist.tabs.sales-purchase.sections.others.title'))
                     ->schema([
                         TextEntry::make('company_registry')
                             ->label(__('partners::filament/resources/partner.infolist.tabs.sales-purchase.fields.company-id'))

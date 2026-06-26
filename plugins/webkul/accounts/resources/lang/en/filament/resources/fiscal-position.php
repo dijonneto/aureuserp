@@ -20,7 +20,17 @@ return [
             'company'                => 'Company',
         ],
         'tabs' => [
+            'mappings' => [
+                'title' => 'Mappings',
+            ],
+
             'account-mapping' => [
+                'title' => 'Account Mapping',
+
+                'actions' => [
+                    'add-account-mapping' => 'Add Account Mapping',
+                ],
+
                 'table' => [
                     'columns' => [
                         'source-account'      => 'Source Account',
@@ -30,6 +40,12 @@ return [
 
             ],
             'tax-mapping' => [
+                'title' => 'Tax Mapping',
+
+                'actions' => [
+                    'add-tax-mapping' => 'Add Tax Mapping',
+                ],
+
                 'table' => [
                     'columns' => [
                         'tax-source'      => 'Tax Source',
@@ -73,6 +89,20 @@ return [
     ],
 
     'infolist' => [
+        'tabs' => [
+            'mappings' => [
+                'title' => 'Mappings',
+            ],
+
+            'account-mapping' => [
+                'title' => 'Account Mapping',
+            ],
+
+            'tax-mapping' => [
+                'title' => 'Tax Mapping',
+            ],
+        ],
+
         'entries' => [
             'name'                 => 'Name',
             'foreign-vat'          => 'Foreign VAT',

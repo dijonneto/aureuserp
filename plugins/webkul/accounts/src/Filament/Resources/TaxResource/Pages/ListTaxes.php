@@ -48,15 +48,13 @@ class ListTaxes extends ListRecords
                 ->favorite()
                 ->label(__('accounts::filament/resources/tax/pages/list-tax.tabs.goods'))
                 ->modifyQueryUsing(fn (Builder $query) => $query->where('tax_scope', TaxScope::CONSU)),
-            'active' => PresetView::make('Active')
+            'active' => PresetView::make(__('accounts::filament/resources/tax/pages/list-tax.tabs.active'))
                 ->icon('heroicon-o-check-circle')
                 ->favorite()
-                ->label(__('accounts::filament/resources/tax/pages/list-tax.tabs.active'))
                 ->modifyQueryUsing(fn (Builder $query) => $query->where('is_active', true)),
-            'in_active' => PresetView::make('In active')
+            'in_active' => PresetView::make(__('accounts::filament/resources/tax/pages/list-tax.tabs.in-active'))
                 ->icon('heroicon-o-x-circle')
                 ->favorite()
-                ->label(__('accounts::filament/resources/tax/pages/list-tax.tabs.in-active'))
                 ->modifyQueryUsing(fn (Builder $query) => $query->where('is_active', false)),
         ];
     }

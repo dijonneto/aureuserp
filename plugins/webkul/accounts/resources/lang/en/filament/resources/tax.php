@@ -2,6 +2,27 @@
 
 return [
     'form' => [
+        'tabs' => [
+            'tax-configuration' => [
+                'title' => 'Tax Configuration',
+
+                'repartition-lines' => [
+                    'title' => 'Repartition Lines',
+
+                    'sections' => [
+                        'invoice-refund-distribution' => [
+                            'title' => 'Invoice & Refund Distribution',
+                            'description' => 'Define how this tax affects accounts for invoices and refunds.',
+                        ],
+                    ],
+                ],
+
+                'descriptions' => [
+                    'title' => 'Descriptions',
+                ],
+            ],
+        ],
+
         'sections' => [
             'fields' => [
                 'name'            => 'Name',
@@ -38,7 +59,9 @@ return [
                         'country'             => 'Country',
                         'include-in-price'    => 'Included in Price',
                         'include-base-amount' => 'Affect Base of Subsequent Taxes',
+                        'include-base-amount-tooltip' => 'If set, taxes with a higher sequence than this one will be affected by it, provided they accept it.',
                         'is-base-affected'    => 'Base Affected by Previous Taxes',
+                        'is-base-affected-tooltip' => 'If set, taxes with a lower sequence might affect this one, provided they try to do it.',
                     ],
                 ],
 

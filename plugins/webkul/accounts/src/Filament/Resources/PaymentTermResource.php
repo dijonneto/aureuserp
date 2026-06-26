@@ -130,7 +130,7 @@ class PaymentTermResource extends Resource
                                             ->relationship('dueTerms')
                                             ->compact()
                                             ->reactive()
-                                            ->addActionLabel(__('Add Due Term'))
+                                            ->addActionLabel(__('accounts::filament/resources/payment-term.form.tabs.due-terms.repeater.due-terms.actions.add-due-term'))
                                             ->table([
                                                 TableColumn::make('value')
                                                     ->label(__('accounts::filament/resources/payment-term.form.tabs.due-terms.repeater.due-terms.fields.value'))
@@ -191,7 +191,7 @@ class PaymentTermResource extends Resource
                                                         $html .= '<div style="margin-bottom:0.75rem;font-size:0.9rem;color:#6b7280;">Example: '.number_format($total, 2).' on '.$start->format('m/d/Y').'</div>';
 
                                                         if (empty($dueTerms)) {
-                                                            $html .= '<div style="padding:1rem;background:#f3f4f6;border-radius:4px;color:#374151;">'.__('No due terms defined to preview').'</div>';
+                                                            $html .= '<div style="padding:1rem;background:#f3f4f6;border-radius:4px;color:#374151;">'.__('accounts::filament/resources/payment-term.form.tabs.due-terms.preview.empty').'</div>';
 
                                                             return new HtmlString($html);
                                                         }
@@ -282,7 +282,6 @@ class PaymentTermResource extends Resource
                     ->label(__('accounts::filament/resources/payment-term.table.groups.display-on-invoice'))
                     ->collapsible(),
                 Tables\Grouping\Group::make('early_discount')
-                    ->label(__('Early Discount'))
                     ->label(__('accounts::filament/resources/payment-term.table.groups.early-discount'))
                     ->collapsible(),
                 Tables\Grouping\Group::make('discount_percentage')
@@ -477,7 +476,7 @@ class PaymentTermResource extends Resource
                                         $html .= '<div style="margin-bottom:0.75rem;font-size:0.9rem;color:#6b7280;">Example: '.number_format($total, 2).' on '.$start->format('m/d/Y').'</div>';
 
                                         if (empty($dueTerms)) {
-                                            $html .= '<div style="padding:1rem;background:#f3f4f6;border-radius:4px;color:#374151;">'.__('No due terms defined to preview').'</div>';
+                                            $html .= '<div style="padding:1rem;background:#f3f4f6;border-radius:4px;color:#374151;">'.__('accounts::filament/resources/payment-term.infolist.tabs.due-terms.preview.empty').'</div>';
 
                                             return new HtmlString($html);
                                         }

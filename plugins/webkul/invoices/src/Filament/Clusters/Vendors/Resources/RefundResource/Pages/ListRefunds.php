@@ -21,7 +21,7 @@ class ListRefunds extends BaseListInvoices
         $predefinedViews = parent::getPresetTableViews();
 
         return [
-            'in_refund' => PresetView::make(__('Refunds'))
+            'in_refund' => PresetView::make(__('invoices::filament/clusters/vendors/resources/refund/pages/list-refund.tabs.refunds'))
                 ->favorite()
                 ->setAsDefault()
                 ->icon('heroicon-s-receipt-percent')

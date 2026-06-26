@@ -82,6 +82,7 @@ return [
     ],
 
     'infolist' => [
+        'title' => 'General Information',
         'name'   => 'Name',
         'status' => 'Status',
     ],
